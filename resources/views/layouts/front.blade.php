@@ -71,17 +71,18 @@
             <div class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <a class="navbar-brand" href="{{ route('welcome') }}">
-                  <img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-                  Logo Event
+                  <!-- <img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""> -->
+                  <i class="fas fa-calendar-alt"></i>
+                  Student Activities
                 </a>
-                <form class="form-inline my-2 my-lg-0">
+                <!-- <form class="form-inline my-2 my-lg-0">
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fa fa-search mr-0"></i></span>
                     </div>
                     <input type="text" class="form-control form-control-custom" id="searchNavInput" name="searchNavInput" autocomplete="off" placeholder="Search By Name, Location">
                   </div>
-                </form>
+                </form> -->
               </ul>              
             </div>
             
@@ -95,9 +96,11 @@
 
               <!-- User Menu -->
               <li class="dropdown user user-menu open d-none d-sm-none d-md-none d-lg-block">
-                <a href="#" class="dropdown-toggle text-dark nav-link" style="display:block;width:80px;" data-toggle="dropdown" aria-expanded="true">
-                  <img src="{{ url('/dashboard/dist/img/admin.png') }}" width="63%" alt="User Image">
+                <a href="#" class="dropdown-toggle text-dark nav-link" style="display:block;" data-toggle="dropdown" aria-expanded="true">
+                  <img src="{{ url('/dashboard/dist/img/admin.png') }}" width="30px" alt="User Image">
+                  {{Session::get('fullname')}}
                 </a>
+                
                 <ul class="dropdown-menu kanin" style="@if (Session::get('status')=='1') width: 200px !important;height: 180px !important; 
                   @elseif (Session::get('status')=='2') width: 200px !important;height: 120px !important; @else width: 200px !important;height: 65px !important; @endif">
                     <!-- Menu Body -->

@@ -18,7 +18,7 @@ class registeredUserController extends Controller
     public function ruleCaptcha(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'g-recaptcha-response' => new Capcha(),
+            'g-recaptcha-response' => new Captcha(),
         ]);
         if ($validator->passes()) {
             return response()->json(['status' => '1']); // success
