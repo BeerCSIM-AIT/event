@@ -26,5 +26,9 @@ class EventCategory extends Model
         return $query;
     }
 
+    public function events(){
+        return $this->hasMany('App\Event','category_id','category_id');
+    }
+
 
 }

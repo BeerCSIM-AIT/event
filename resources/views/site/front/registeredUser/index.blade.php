@@ -28,6 +28,12 @@
                         </p>
                         <p class="card-text">
                           <div class="text-left">
+                              Organizer : 
+                              {{ $data->organizer }}
+                          </div>
+                        </p>
+                        <p class="card-text">
+                          <div class="text-left">
                               {{ $data->description }}
                           </div>
                         </p>
@@ -37,12 +43,7 @@
                                 <?php echo App\Event::DateToText( date('d-m-Y', strtotime($data->eventDateForm)).' - '.date('d-m-Y', strtotime($data->eventDateTo)) ); ?>
                             </div>
                         </p>
-                        <p class="card-text">
-                          <div class="text-left">
-                              Organizer : 
-                              {{ $data->organizer }}
-                          </div>
-                        </p>
+                        
                         <p class="card-text">
                           <div class="text-left">
                               <i class="fas fa-map-marker-alt mr-3"></i>
@@ -52,7 +53,9 @@
                         <p class="card-text">
                             <div class="text-left">
                                 <i class="fas fa-users mr-2"></i>
-                                <span class="following-count-text">0 followers</span>
+                                <span class="following-count-text">
+                                  {{$no_of_registration}} registered
+                                </span>
                             </div>
                         </p>
 

@@ -101,10 +101,20 @@
                   {{Session::get('fullname')}}
                 </a>
                 
-                <ul class="dropdown-menu kanin" style="@if (Session::get('status')=='1') width: 200px !important;height: 180px !important; 
+                <ul class="dropdown-menu kanin" style="@if (Session::get('status')=='1') width: 200px !important;height: 260px !important; 
                   @elseif (Session::get('status')=='2') width: 200px !important;height: 120px !important; @else width: 200px !important;height: 65px !important; @endif">
                     <!-- Menu Body -->
                     <li class="user-body">
+                        <div class="col-xs-4 text-center">
+                          <a href="/MyEvents" class="nav-link d-none d-sm-none d-md-none d-lg-block">
+                            My Events
+                          </a>
+                        </div>
+                        <div class="col-xs-4 text-center">
+                          <a href="" class="nav-link d-none d-sm-none d-md-none d-lg-block">
+                            My Profile
+                          </a>
+                        </div>
                         @if (Session::get('status')=='1'||Session::get('status')=='2') 
                           <div class="col-xs-4 text-center">
                             <a href="{{ route('calendarEvent') }}" class="nav-link d-none d-sm-none d-md-none d-lg-block">
@@ -122,6 +132,7 @@
                           <div class="dropdown-divider"></div>
                         @endif  
                     </li>
+                    
                     <!-- Menu Footer-->
                     <li class="user-footer">
                       <div class="row text-center">
@@ -136,6 +147,7 @@
                               @csrf
                           </form>
                         </div>
+                        
                       </div>
                     </li>
                   </ul>
@@ -247,7 +259,7 @@
     </div>
   </div>
   <div class="card-header text-right">
-    CopyRight © 2020
+    CopyRight © 2020  Phakpoom.I and Subash.S
   </div>
   <!--end  footer -->
 </body>

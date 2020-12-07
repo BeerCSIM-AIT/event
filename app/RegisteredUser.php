@@ -29,4 +29,8 @@ class RegisteredUser extends Model
 
         return $query;
     }
+    
+    public function event(){
+        return $this->belongsTo('App\Event','event_id','event_id');
+    }
 }

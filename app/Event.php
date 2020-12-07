@@ -52,4 +52,12 @@ class Event extends Model
         
         return "$dForm $mForm - $dTo $mTo";
     }
+
+    public function eventCategory(){
+        return $this->belongsTo('App\EventCategory','category_id','category_id');
+    }
+
+    public function registeredUsers(){
+        return $this->hasMany('App\RegisteredUser','user_id','id');
+    }
 }
